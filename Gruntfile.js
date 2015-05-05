@@ -20,11 +20,12 @@ module.exports = function(grunt) {
     },
 
     raml2boot: {
-      default_options: {
+      example: {
         options: {
+          standalone: true
         },
         files: {
-          'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123']
+          'tmp/test.html': ['examples/api.raml']
         }
       }
     }
