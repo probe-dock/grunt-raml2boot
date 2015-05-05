@@ -57,8 +57,6 @@ The path to a custom layout file to use.
 
 ## Examples
 
-#### Simple Conversion
-
 In this example, the `raml2boot:apidoc` task will parse the RAML file at `doc/api.raml` and save the resulting HTML to `dest/api.html`.
 
 ```js
