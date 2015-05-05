@@ -62,7 +62,9 @@ In this example, the `raml2boot:apidoc` task will parse the RAML file at `doc/ap
 ```js
 grunt.initConfig({
   raml2boot: {
-    options: {},
+    options: {
+      standalone: true
+    },
     apidoc: {
       files: {
         'dest/api.html': 'doc/api.raml'
