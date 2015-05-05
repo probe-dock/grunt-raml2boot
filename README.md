@@ -49,7 +49,7 @@ If false, only a partial HTML fragment will be generated, to be included in a co
 
 This options has no effect if the `layout` option is specified.
 
-#### options.layout
+### options.layout
 
 Type: `string`
 
