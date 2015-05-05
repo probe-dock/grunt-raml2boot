@@ -1,6 +1,15 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
+    bump: {
+      options: {
+        files: ['package.json'],
+        commit: false,
+        createTag: false,
+        push: false
+      }
+    },
+
     jasmine_node: {
       options: {
         forceExit: true,
@@ -33,6 +42,7 @@ module.exports = function(grunt) {
 
   grunt.loadTasks('tasks');
 
+  grunt.loadNpmTasks('grunt-bump');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-jasmine-node');
 

@@ -1,7 +1,7 @@
 {
   "name": "grunt-raml2boot",
   "description": "Grunt task for RAML to Bootstrap.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/probe-dock/grunt-raml2boot",
   "author": "Simon Oulevay <npm@alphahydrae.com>",
   "repository": {
@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "grunt": "~0.4.5",
+    "grunt-bump": "^0.3.1",
     "grunt-contrib-jshint": "^0.9.2",
     "grunt-jasmine-node": "^0.3.1"
   },
@@ -27,11 +28,13 @@
     "grunt": "~0.4.5"
   },
   "keywords": [
-    "gruntplugin"
+    "gruntplugin",
+    "raml",
+    "bootstrap"
   ],
   "dependencies": {
     "bluebird": "^2.9.25",
-    "raml2boot": "^0.1.1",
+    "raml2boot": "^0.1.2",
     "underscore": "^1.8.3"
   }
 }

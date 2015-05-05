@@ -2,6 +2,9 @@
 
 > Grunt task for RAML to Bootstrap.
 
+[![NPM version](https://badge.fury.io/js/grunt-raml2boot.svg)](http://badge.fury.io/js/grunt-raml2boot)
+[![License](https://img.shields.io/npm/l/grunt-raml2boot.svg)](http://opensource.org/licenses/MIT)
+
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
 
@@ -17,9 +20,8 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-raml2boot');
 ```
 
-## The "raml2boot" task
+## Usage
 
-### Overview
 In your project's Gruntfile, add a section named `raml2boot` to the data object passed into `grunt.initConfig()`.
 
 ```js
@@ -35,49 +37,39 @@ grunt.initConfig({
 });
 ```
 
-### Options
+## Options
 
-#### options.separator
-Type: `String`
-Default value: `',  '`
+### options.standalone
 
-A string value that is used to do something with whatever.
+Type: `boolean`
+Default value: `true`
 
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
+If true, a standalone HTML page with a navbar and title will be generated.
+If false, only a partial HTML fragment will be generated, to be included in a complete page elsewhere.
 
-A string value that is used to do something else with whatever else.
+This options has no effect if the `layout` option is specified.
 
-### Usage Examples
+#### options.layout
 
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
+Type: `string`
+
+The path to a custom layout file to use.
+
+## Examples
+
+#### Simple Conversion
+
+In this example, the `raml2boot:apidoc` task will parse the RAML file at `doc/api.raml` and save the resulting HTML to `dest/api.html`.
 
 ```js
 grunt.initConfig({
   raml2boot: {
     options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
-
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
-
-```js
-grunt.initConfig({
-  raml2boot: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
+    apidoc: {
+      files: {
+        'dest/api.html': 'doc/api.raml'
+      }
+    }
   },
 });
 ```
