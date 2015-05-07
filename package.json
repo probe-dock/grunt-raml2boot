@@ -1,7 +1,7 @@
 {
   "name": "grunt-raml2boot",
   "description": "Grunt task for RAML to Bootstrap.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/probe-dock/grunt-raml2boot",
   "author": "Simon Oulevay <npm@alphahydrae.com>",
   "repository": {

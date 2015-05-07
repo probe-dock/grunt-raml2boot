@@ -40,7 +40,7 @@ module.exports = function(grunt) {
 
     var done = this.async();
 
-    p.all(_.map(conversions, convert));
+    p.all(_.map(conversions, convert)).then(done);
 
     function convert(dest, src) {
       return raml2boot(_.extend(options, { source: src, output: dest })).then(function() {
