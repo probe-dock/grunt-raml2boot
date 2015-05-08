@@ -3,6 +3,7 @@
 > Grunt task for RAML to Bootstrap.
 
 [![NPM version](https://badge.fury.io/js/grunt-raml2boot.svg)](http://badge.fury.io/js/grunt-raml2boot)
+[![Dependency Status](https://gemnasium.com/probe-dock/grunt-raml2boot.svg)](https://gemnasium.com/probe-dock/grunt-raml2boot)
 [![License](https://img.shields.io/npm/l/grunt-raml2boot.svg)](http://opensource.org/licenses/MIT)
 
 ## Getting Started
